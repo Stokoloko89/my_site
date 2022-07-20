@@ -6,6 +6,7 @@
 
 <svelte:head>
 	<title>Lunga.</title>
+    <meta name="description" content="My name is Lunga. I am a front end developer and UI / UX designer.">
 </svelte:head>
 
 <Nav />
