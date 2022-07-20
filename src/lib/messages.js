@@ -7,6 +7,5 @@ export async function createNewMessage({ name, email, message }) {
     if (error) {
         throw error
     }
-    console.log(data)
     return data
 }
