@@ -1,5 +1,10 @@
 <script>
 	import { fly } from 'svelte/transition';
+	import { onMount } from 'svelte';
+	import { disableScrollHandling } from '$app/navigation';
+	onMount(async () => {
+		disableScrollHandling();
+	});
 </script>
 
 <div class="container">
@@ -30,7 +35,7 @@
 		justify-content: center;
 		min-height: 72vh;
 		gap: 24px;
-        margin-bottom: 120px;
+		margin-bottom: 120px;
 	}
 	.coming_soon_flyer {
 		display: flex;

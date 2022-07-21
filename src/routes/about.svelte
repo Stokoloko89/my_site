@@ -2,6 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { afterUpdate } from 'svelte';
+	import { disableScrollHandling } from '$app/navigation';
 
 	afterUpdate(() => {
 		window.scrollTo({
@@ -12,6 +13,9 @@
 
 	let ready = false;
 	onMount(() => (ready = true));
+	onMount(async () => {
+		disableScrollHandling();
+	});
 </script>
 
 <div
