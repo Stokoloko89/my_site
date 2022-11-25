@@ -144,11 +144,6 @@
 				</svg>
 			</a>
 		</div>
-		<div class="contact_alternative">
-			<p>or</p>
-			<br />
-			<p>email me directly on <strong>lungaqaba@gmail.com</strong></p>
-		</div>
 	</div>
 </div>
 
