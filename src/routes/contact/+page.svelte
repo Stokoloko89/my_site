@@ -29,16 +29,13 @@
 	 */
 	let email;
 	/**
-	 * @type {string}
 	 */
-	let message;
 
 	function submitedForm() {
-		createNewMessage({ name, email, message });
+		createNewMessage({ name, email });
 
 		name = '';
 		email = '';
-		message = '';
 		messageSent = true;
 		setTimeout(() => {
 			messageSent = false;
@@ -240,15 +237,6 @@
 		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
 	}
 
-	.contact-form .text-area textarea {
-		width: 299px;
-		margin-left: 0 px;
-	}
-	@media (min-width: 370px) {
-		.contact-form .text-area textarea {
-			margin-left: 55px;
-		}
-	}
 	.contact-platforms {
 		display: flex;
 		flex-direction: column;
