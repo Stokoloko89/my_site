@@ -8,7 +8,7 @@
 	<title>Lunga.</title>
 	<meta
 		name="description"
-		content="My name is Lunga. I am a front end developer and UI / UX designer."
+		content="My name is Lunga Qaba. I am a front end developer and UI / UX designer."
 	/>
 </svelte:head>
 
