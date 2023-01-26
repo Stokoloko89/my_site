@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import { afterUpdate } from 'svelte';
 	import { disableScrollHandling } from '$app/navigation';
-	import { createNewMessage } from '../lib/messages';
+	import { createNewMessage } from '../../lib/messages';
 
 	afterUpdate(() => {
 		window.scrollTo({
@@ -44,7 +44,7 @@
 			messageSent = false;
 		}, 5000);
 
-		clearTimeout();
+		clearTimeout(5000);
 	}
 </script>
 
@@ -57,17 +57,27 @@
 	>
 		<h3>Get in touch</h3>
 		<div class="text-inputs">
-			<label for="name">name</label>
-			<input type="text" name="name" id="name" bind:value={name} minlength="3" required />
+			<label for="name"
+				>name
+				<input type="text" name="name" id="name" bind:value={name} minlength="3" required />
+			</label>
 		</div>
 		<div class="text-inputs">
-			<label for="email">email</label>
-			<input type="email" name="email" id="email" bind:value={email} required />
+			<label for="email"
+				>email
+				<input type="email" name="email" id="email" bind:value={email} required />
+			</label>
 		</div>
-		<div class="text-area">
-			<label for="message">message</label>
-			<textarea type="text" name="message" id="message" rows="5" cols="30" bind:value={message} />
-		</div>
+		<!-- <div class="text-inputs">
+			<textarea
+				name="message"
+				id="message"
+				placeholder="Write your message here"
+				rows="5"
+				cols="30"
+				bind:value={message}
+			/>
+		</div> -->
 		{#if messageSent}
 			<input type="submit" class="send-message" value="Message sent!!" />
 		{:else}
@@ -151,26 +161,30 @@
 	.form-contact {
 		gap: 20px;
 		display: flex;
-		flex-wrap: wrap;
-		margin: 0px 120px 120px 120px;
+		flex-direction: column;
+		margin: 0px 8px 8px 8px;
 		justify-content: space-evenly;
 		width: auto;
 		margin-bottom: 120px;
 	}
 	h3 {
 		width: 422px;
-		height: 68px;
+		height: 48px;
+		margin-top: 16px;
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 600;
 		font-size: 32px;
 		line-height: 49px;
+		text-align: center;
 	}
 	.contact-form {
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: 14px;
+		width: 100%;
 	}
 	.contact-form label {
 		font-family: 'Montserrat';
@@ -193,27 +207,15 @@
 		transition: 0.5s;
 	}
 
-	.contact-form textarea {
-		width: 377px;
-		height: 170px;
-		padding: 10px;
-		font-size: 16px;
-
-		background: #d9d9d9;
-		/* Input Stroke */
-
-		box-sizing: border-box;
-		border: 1px solid rgba(48, 62, 65, 0.5);
-		border-radius: 5px;
-	}
-
 	.contact-form .send-message {
 		display: flex;
 		justify-content: center;
 		width: 250px;
 		height: 51px;
 		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
-		margin-left: 133px;
+		margin-left: auto;
+		margin-bottom: 8px;
+		margin-right: auto;
 		padding: 10px;
 
 		font-family: 'Montserrat';
@@ -247,14 +249,15 @@
 		background: #c6d4d7;
 		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
 	}
-	.contact-form .text-inputs {
-		display: flex;
-		align-items: center;
-		gap: 62px;
+
+	.contact-form .text-area textarea {
+		width: 299px;
+		margin-left: 0 px;
 	}
-	.contact-form .text-area {
-		display: flex;
-		gap: 62px;
+	@media (min-width: 370px) {
+		.contact-form .text-area textarea {
+			margin-left: 55px;
+		}
 	}
 	.contact-platforms {
 		display: flex;
@@ -262,19 +265,12 @@
 		text-align: center;
 		font-size: 18px;
 	}
-	.contact-platforms p {
-		font-size: 18px;
-	}
+
 	.social {
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
 		height: 50%;
 		width: 100%;
-	}
-	.contact_alternative {
-		display: flex;
-		flex-direction: column;
-		gap: 16px;
 	}
 </style>

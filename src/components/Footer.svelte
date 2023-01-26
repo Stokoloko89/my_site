@@ -141,9 +141,9 @@
 
 	@media screen and (max-width: 385px) {
 		.container {
-			position: absolute;
+			/* position: absolute;
 			bottom: -225px;
-			height: 105px;
+			height: 105px; */
 			display: flex;
 			flex-direction: column-reverse;
 			justify-content: space-evenly;

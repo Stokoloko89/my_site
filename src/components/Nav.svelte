@@ -16,7 +16,7 @@
 			<a href="/" title="Home" class="logo">Home</a>
 			<ul class="nav-links">
 				<li><a href="/about" title="About">About</a></li>
-				<li><a href="/projects" title="Projects">Projects</a></li>
+				<li><a href="/myprojects" title="Projects">Projects</a></li>
 				<li><a href="/contact" title="Contact">Contact</a></li>
 			</ul>
 		</div>

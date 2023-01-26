@@ -14,7 +14,7 @@
 		</h3>
 
 		<h3 in:fly={{ y: 50, duration: 1200, delay: 3200 }} out:fly={{ duration: 500 }}>
-			.. so Watch this space!
+			so Watch this space!
 		</h3>
 	</div>
 	<a
@@ -35,11 +35,12 @@
 		justify-content: center;
 		min-height: 72vh;
 		gap: 24px;
-		margin-bottom: 120px;
+		margin-bottom: 20px;
 	}
 	.coming_soon_flyer {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		align-items: center;
 	}
 

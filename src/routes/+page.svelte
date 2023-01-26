@@ -44,13 +44,13 @@
 	@media screen and (max-width: 385px) {
 		.roles {
 			font-family: 'Montserrat';
-			font-size: 58px;
+			font-size: 40px;
 			line-height: 150%;
 			letter-spacing: 0.1em;
 			color: #303e4112;
 			position: relative;
 			z-index: -3;
-			top: -134px;
+			top: -60px;
 			right: -137px;
 			overflow: clip;
 		}

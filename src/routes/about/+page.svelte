@@ -48,28 +48,28 @@
 			<p>Contact me</p>
 		</a>
 	</div>
+	<img
+		class="dev_lang"
+		src="images/dev_languages.png"
+		alt="A list of programming languages that I am competent in"
+		in:fly={{ x: -50, duration: 1400, delay: 1400 }}
+		out:fly={{ duration: 500 }}
+	/>
 </div>
-
-<img
-	class="dev_lang"
-	src="images/dev_languages.png"
-	alt="A list of programming languages that I am competent in"
-	in:fly={{ x: -50, duration: 1400, delay: 1400 }}
-	out:fly={{ duration: 500 }}
-/>
 
 <style>
 	.image-description {
 		display: flex;
-		justify-content: center;
-		height: 371.76px;
-		gap: 64px;
+		flex-direction: column;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 500;
-		font-size: 16px;
-		line-height: 140%;
-		margin: 32px 64px;
+		font-size: 13px;
+		line-height: 150%;
+		gap: 8px;
 		/* or 30px */
 
 		letter-spacing: 0.1em;
@@ -78,22 +78,28 @@
 	}
 
 	.image-description img {
-		object-fit: scale-down;
+		width: 240px;
+		margin-top: 24px;
+		margin-left: 16px;
 	}
 
-	.description a {
-		display: flex;
-		flex-direction: column;
+	.image-description p {
+		width: 320px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.description {
-		max-width: 500px;
+		max-width: 400px;
 	}
 
-	.contact-me {
+	.description .contact-me {
 		display: flex;
 		justify-content: center;
 		width: 250px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 24px;
 		height: 51px;
 		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
 
@@ -128,42 +134,39 @@
 
 	.dev_lang {
 		/* position: absolute; */
-		width: 459.31px;
-		height: 212px;
-		margin-left: 200px;
-		top: 481px;
-		z-index: -1;
-		object-fit: scale-down;
-		margin-bottom: 120px;
+		display: none;
 	}
 
-	@media screen and (max-width: 1000px) {
+	@media (min-width: 720px) and (max-width: 1000px) {
 		.image-description {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			height: 1020.76px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 			font-family: 'Montserrat';
 			font-style: normal;
 			font-weight: 500;
-			font-size: 18px;
+			font-size: 13px;
 			line-height: 150%;
-			margin: 32px 64px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
 			/* or 30px */
 
 			letter-spacing: 0.1em;
-			max-width: 400px;
 
 			color: #081b1f;
 		}
 
-		.description a {
-			display: flex;
-			flex-direction: column;
+		.image-description img {
+			width: 320px;
 		}
 
 		.description {
-			max-width: 400px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			max-width: none;
 		}
 
 		.contact-me {
@@ -205,6 +208,80 @@
 		.dev_lang {
 			/* position: absolute; */
 			display: none;
+		}
+	}
+
+	@media (min-width: 1000px) and (max-width: 2400px) {
+		.image-description {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 150%;
+			margin-left: auto;
+			margin-right: auto;
+			width: 75%;
+			/* or 30px */
+
+			letter-spacing: 0.1em;
+
+			color: #081b1f;
+		}
+
+		.image-description img {
+			width: 320px;
+		}
+
+		.description {
+			max-width: none;
+		}
+		.description .content p {
+			width: 425px;
+			font-size: 16px;
+		}
+
+		.contact-me {
+			display: flex;
+			justify-content: center;
+			width: 250px;
+			height: 51px;
+			box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 150%;
+			/* identical to box height, or 36px */
+
+			text-align: center;
+			letter-spacing: 0.1em;
+
+			color: #303e41;
+			text-decoration: none;
+			transition: background 0.3s ease-in;
+			margin-top: 16px;
+			z-index: 1.2;
+		}
+
+		.contact-me p {
+			align-self: center;
+		}
+
+		.contact-me:hover {
+			width: 250px;
+			height: 51px;
+			/* border-radius: 0px; */
+			background: #98a5a8;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		.image-description .dev_lang {
+			grid-column-start: 1;
+			grid-column-end: 3;
+			display: inline;
 			width: 459.31px;
 			height: 212px;
 			margin-left: 64px;
