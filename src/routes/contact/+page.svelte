@@ -68,7 +68,7 @@
 				<input type="email" name="email" id="email" bind:value={email} required />
 			</label>
 		</div>
-		<!-- <div class="text-inputs">
+		<div class="text-inputs">
 			<textarea
 				name="message"
 				id="message"
@@ -77,7 +77,7 @@
 				cols="30"
 				bind:value={message}
 			/>
-		</div> -->
+		</div>
 		{#if messageSent}
 			<input type="submit" class="send-message" value="Message sent!!" />
 		{:else}
