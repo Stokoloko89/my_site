@@ -29,7 +29,7 @@
 		justify-content: space-between;
 		align-items: baseline;
 		margin: 40px 150px;
-		height: 80px;
+		height: 150px;
 	}
 
 	.logo {
@@ -74,7 +74,7 @@
 			justify-content: space-between;
 			align-items: center;
 			margin: 30px 64px 0px 64px;
-			height: 80px;
+			height: 120px;
 		}
 
 		.logo {

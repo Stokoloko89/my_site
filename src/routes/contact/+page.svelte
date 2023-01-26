@@ -31,7 +31,7 @@
 	/**
 	 */
 
-	function submitedForm() {
+	function submittedForm() {
 		createNewMessage({ name, email });
 
 		name = '';
@@ -47,7 +47,7 @@
 
 <div class="form-contact">
 	<form
-		on:submit|preventDefault={submitedForm}
+		on:submit|preventDefault={submittedForm}
 		class="contact-form"
 		in:fly={{ x: -50, duration: 1200, delay: 1200 }}
 		out:fly={{ duration: 500 }}
@@ -58,18 +58,19 @@
 				>name
 				<input type="text" name="name" id="name" bind:value={name} minlength="3" required />
 			</label>
+			<div class="text-inputs">
+				<label for="email"
+					>email
+					<input type="email" name="email" id="email" bind:value={email} required />
+				</label>
+
+				{#if messageSent}
+					<input type="submit" class="send-message" value="Message sent!!" />
+				{:else}
+					<input type="submit" class="send-message" value="Send message" />
+				{/if}
+			</div>
 		</div>
-		<div class="text-inputs">
-			<label for="email"
-				>email
-				<input type="email" name="email" id="email" bind:value={email} required />
-			</label>
-		</div>
-		{#if messageSent}
-			<input type="submit" class="send-message" value="Message sent!!" />
-		{:else}
-			<input type="submit" class="send-message" value="Send message" />
-		{/if}
 	</form>
 
 	<div
@@ -182,7 +183,7 @@
 		width: 70px;
 	}
 	.contact-form input {
-		width: 299px;
+		width: 250px;
 		height: 45px;
 		background: #d9d9d9;
 		/* Input Stroke */
@@ -192,6 +193,12 @@
 		padding: 10px;
 		font-size: 16px;
 		transition: 0.5s;
+	}
+
+	.text-inputs {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 	}
 
 	.contact-form .send-message {
@@ -250,5 +257,6 @@
 		align-items: center;
 		height: 50%;
 		width: 100%;
+		margin-top: 20px;
 	}
 </style>
