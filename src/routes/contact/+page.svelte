@@ -30,12 +30,16 @@
 	let email;
 	/**
 	 */
+	/**
+	 * @type {string}
+	 */
+	let message;
 
 	function submittedForm() {
-		createNewMessage({ name, email });
-
+		createNewMessage({ message, name, email });
 		name = '';
 		email = '';
+		message = '';
 		messageSent = true;
 		setTimeout(() => {
 			messageSent = false;
@@ -58,18 +62,19 @@
 				>name
 				<input type="text" name="name" id="name" bind:value={name} minlength="3" required />
 			</label>
-			<div class="text-inputs">
-				<label for="email"
-					>email
-					<input type="email" name="email" id="email" bind:value={email} required />
-				</label>
-
-				{#if messageSent}
-					<input type="submit" class="send-message" value="Message sent!!" />
-				{:else}
-					<input type="submit" class="send-message" value="Send message" />
-				{/if}
-			</div>
+			<label for="email"
+				>email
+				<input type="email" name="email" id="email" bind:value={email} required />
+			</label>
+			<label for="textarea">
+				message
+				<textarea name="textarea" id="textarea" bind:value={message} cols="30" rows="10" />
+			</label>
+			{#if messageSent}
+				<input type="submit" class="send-message" value="Message sent!!" />
+			{:else}
+				<input type="submit" class="send-message" value="Send message" />
+			{/if}
 		</div>
 	</form>
 
@@ -183,6 +188,18 @@
 		width: 70px;
 	}
 	.contact-form input {
+		width: 250px;
+		height: 45px;
+		background: #d9d9d9;
+		/* Input Stroke */
+
+		border: 1px solid rgba(48, 62, 65, 0.5);
+		border-radius: 5px;
+		padding: 10px;
+		font-size: 16px;
+		transition: 0.5s;
+	}
+	.contact-form textarea {
 		width: 250px;
 		height: 45px;
 		background: #d9d9d9;
