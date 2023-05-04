@@ -15,11 +15,11 @@
 </script>
 
 <div
-	class="grid grid-cols-2 mx-auto font-montserrat font-medium text-xs leading-6 tracking-wider text-gray-800 gap-8"
+	class="flex flex-col flex-wrap sm:grid grid-cols-2 mx-auto font-montserrat font-medium text-xs leading-6 tracking-wider text-gray-800 gap-8"
 	in:fade={{ duration: 1200, delay: 1200 }}
 	out:fade={{ duration: 500 }}
 >
-	<div class="w-96 mx-auto col-span-1 text-[13px]">
+	<div class="w-96 mx-auto col-span-1 px-2 text-[13px] max-w-xs text-justify sm:max-w-none">
 		<p>
 			I’m Lunga, and thank you for visiting this site. As a front end developer I specialise in
 			leveraging the power of technology to connect people, businesses & artists with their
@@ -42,7 +42,7 @@
 	</div>
 
 	<img
-		class="col-span-1 w-96 mt-6 ml-4"
+		class="col-span-1 w-72 sm:w-96 mt-6 ml-4"
 		src="images/dev_languages.png"
 		alt="A list of programming languages that I am competent in"
 		in:fade={{ duration: 1400, delay: 1400 }}

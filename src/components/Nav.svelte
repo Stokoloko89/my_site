@@ -45,5 +45,6 @@
 				</li>
 			</ul>
 		</div>
+		<hr class="mb-2 mx-10 sm:hidden">
 	{/if}
 </nav>
