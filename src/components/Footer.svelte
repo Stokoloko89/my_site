@@ -7,19 +7,19 @@
 </script>
 
 {#if ready}
-	<footer>
+	<footer class="flex mt-auto">
 		<div
-			class="container"
+			class="h-120 flex flex-col-reverse justify-space-evenly items-center w-screen bg-gradient-to-t from-c6d4d7 via-rgba-8-27-31-81 to-rgba-8-27-31-0 justify-center pb-6 my"
 			in:fly={{ x: -50, duration: 2000, delay: 2000 }}
 			out:fly={{ duration: 5000 }}
 		>
-			<ul class="nav-links">
+			<ul class="flex gap-4 mt-3">
 				<a href="/" title="Home" class="logo">Home</a>
 				<li><a href="/about" title="About">About</a></li>
-				<li><a href="/projects" title="Projects">Projects</a></li>
-				<li><a href="/contact" title="Contact">Contact</a></li>
+				<li><a href="/myprojects" title="Projects">Projects</a></li>
+				<li><a href="https://www.linkedin.com/in/lunga-qaba-b19325236" title="Contact">Contact</a></li>
 			</ul>
-			<div class="social">
+			<div class="flex gap-6">
 				<a
 					href="https://github.com/Stokoloko89"
 					title="Github"
@@ -86,115 +86,3 @@
 		</div>
 	</footer>
 {/if}
-
-<style>
-	.container {
-		height: 120px;
-		display: flex;
-		flex-direction: column-reverse;
-		justify-content: space-evenly;
-		align-items: center;
-		width: 100vw;
-		background: linear-gradient(
-			179.69deg,
-			#c6d4d7 5.22%,
-			rgba(8, 27, 31, 0.81) 350.6%,
-			rgba(8, 27, 31, 0) 280.39%
-		);
-	}
-	.logo {
-		font-style: normal;
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 59px;
-		color: rgba(48, 62, 65, 0.976471);
-		height: 60px;
-		text-decoration: none;
-	}
-
-	.nav-links {
-		display: flex;
-		list-style: none;
-		gap: 24px;
-		z-index: 1;
-	}
-	.nav-links a {
-		text-decoration: none;
-		font-family: 'Montserrat';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 29px;
-		color: rgba(48, 62, 65, 0.976471);
-		letter-spacing: 0.1em;
-		transition: text-shadow 0.3s;
-	}
-
-	.nav-links a:hover {
-		text-shadow: 0 0 0.7px #333, 0 0 0.65px #333;
-	}
-	.social {
-		display: flex;
-		gap: 28px;
-		z-index: 1;
-	}
-
-	@media screen and (max-width: 385px) {
-		.container {
-			/* position: absolute;
-			bottom: -225px;
-			height: 105px; */
-			display: flex;
-			flex-direction: column-reverse;
-			justify-content: space-evenly;
-			align-items: center;
-			width: 100vw;
-			background: linear-gradient(
-				179.69deg,
-				#c6d4d7 5.22%,
-				rgba(8, 27, 31, 0.81) 350.6%,
-				rgba(8, 27, 31, 0) 280.39%
-			);
-		}
-		.logo {
-			font-style: normal;
-			font-weight: 400;
-			font-size: 16px;
-			line-height: 59px;
-			color: rgba(48, 62, 65, 0.976471);
-			height: 60px;
-			text-decoration: none;
-			z-index: 1;
-		}
-
-		.nav-links {
-			display: flex;
-			list-style: none;
-			gap: 24px;
-		}
-		.nav-links a {
-			text-decoration: none;
-			font-family: 'Montserrat';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 12px;
-			line-height: 29px;
-			color: rgba(48, 62, 65, 0.976471);
-			letter-spacing: 0.1em;
-			transition: text-shadow 0.3s;
-		}
-
-		.nav-links a:hover {
-			text-shadow: 0 0 0.7px #333, 0 0 0.65px #333;
-		}
-		.social {
-			display: flex;
-			gap: 28px;
-		}
-
-		svg {
-			width: 32px;
-			height: 32px;
-		}
-	}
-</style>

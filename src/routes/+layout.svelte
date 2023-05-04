@@ -1,6 +1,6 @@
 <script>
 	import Nav from '../components/Nav.svelte';
-	import global from '../../src/global.css';
+	import '../app.css';
 	import Footer from '../components/Footer.svelte';
 </script>
 
@@ -12,7 +12,8 @@
 	/>
 </svelte:head>
 
-<Nav />
-<slot />
-
-<Footer />
+<div class="flex flex-col h-screen max-w-5xl mx-auto">
+	<Nav />
+	<slot />
+	<Footer />
+</div>

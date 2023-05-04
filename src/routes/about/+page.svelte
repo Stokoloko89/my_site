@@ -1,8 +1,7 @@
 <script>
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { afterUpdate } from 'svelte';
-	import { disableScrollHandling } from '$app/navigation';
 
 	afterUpdate(() => {
 		window.scrollTo({
@@ -13,281 +12,46 @@
 
 	let ready = false;
 	onMount(() => (ready = true));
-	onMount(async () => {
-		disableScrollHandling();
-	});
 </script>
 
 <div
-	class="image-description"
-	in:fly={{ x: -50, duration: 1200, delay: 1200 }}
-	out:fly={{ duration: 500 }}
+	class="grid grid-cols-2 mx-auto font-montserrat font-medium text-xs leading-6 tracking-wider text-gray-800 gap-8"
+	in:fade={{ duration: 1200, delay: 1200 }}
+	out:fade={{ duration: 500 }}
 >
-	<img src="/images/lunga_image.png" alt="" />
-
-	<div class="description">
-		<div class="content">
-			<p>I’m Lunga, and thank you for visiting this site.</p>
-			<br />
-			<p>
-				I love technology! As a front end developer I specialise in leveraging the power of
-				technology to connect people, businesses & artists with their audience.
-			</p>
-			<br />
-			<p>
-				I’ve been in sales & customer service for over 10 years. This has helped me to appreciate &
-				understand the contact points between the seller & the buyer.
-			</p>
-			<br />
-			<p>
-				Get intouch with me to discuss solutions that will optimise your conversion funnel to
-				produce improved results for your business.
-			</p>
-		</div>
-		<a href="/contact" class="contact-me">
-			<p>Contact me</p>
-		</a>
+	<div class="w-96 mx-auto col-span-1 text-[13px]">
+		<p>
+			I’m Lunga, and thank you for visiting this site. As a front end developer I specialise in
+			leveraging the power of technology to connect people, businesses & artists with their
+			audience. I’ve been in sales & customer service for over 10 years. <br /> This has helped me to
+			appreciate & understand the contact points between the seller & the buyer. Get intouch with me
+			to discuss solutions that will optimise your conversion funnel to produce improved results for
+			your business.
+		</p>
+		<br />
+		<p>
+			I also possess strong data analysis skills, which allows me to identify key performance
+			indicators and optimize conversion funnels for businesses to achieve improved results.
+		</p>
+		<br />
+		<p>
+			I would be delighted to discuss with you how my expertise can benefit your business and help
+			you achieve your goals. Please feel free to contact me at your convenience to arrange a
+			consultation.
+		</p>
 	</div>
+
 	<img
-		class="dev_lang"
+		class="col-span-1 w-96 mt-6 ml-4"
 		src="images/dev_languages.png"
 		alt="A list of programming languages that I am competent in"
-		in:fly={{ x: -50, duration: 1400, delay: 1400 }}
-		out:fly={{ duration: 500 }}
+		in:fade={{ duration: 1400, delay: 1400 }}
+		out:fade={{ duration: 500 }}
 	/>
+	<a
+		href="https://www.linkedin.com/in/lunga-qaba-b19325236"
+		class="col-span-2 flex items-center justify-center w-48 h-10 mx-auto my-8 font-montserrat font-semibold text-lg leading-6 text-white transition duration-300 bg-gray-700 border border-gray-700 shadow-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
+	>
+		<p class="self-center">Contact me</p>
+	</a>
 </div>
-
-<style>
-	.image-description {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-left: auto;
-		margin-right: auto;
-		font-family: 'Montserrat';
-		font-style: normal;
-		font-weight: 500;
-		font-size: 13px;
-		line-height: 150%;
-		gap: 8px;
-		/* or 30px */
-
-		letter-spacing: 0.1em;
-
-		color: #081b1f;
-	}
-
-	.image-description img {
-		width: 240px;
-		margin-top: 24px;
-		margin-left: 16px;
-	}
-
-	.image-description p {
-		width: 320px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.description {
-		max-width: 400px;
-	}
-
-	.description .contact-me {
-		display: flex;
-		justify-content: center;
-		width: 250px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 24px;
-		height: 51px;
-		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
-
-		font-family: 'Montserrat';
-		font-style: normal;
-		font-weight: 600;
-		font-size: 18px;
-		line-height: 150%;
-		/* identical to box height, or 36px */
-
-		text-align: center;
-		letter-spacing: 0.1em;
-
-		color: #303e41;
-		text-decoration: none;
-		transition: background 0.3s ease-in;
-		margin-top: 16px;
-		z-index: 1.2;
-	}
-
-	.contact-me p {
-		align-self: center;
-	}
-
-	.contact-me:hover {
-		width: 250px;
-		height: 51px;
-		/* border-radius: 0px; */
-		background: #98a5a8;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-	}
-
-	.dev_lang {
-		/* position: absolute; */
-		display: none;
-	}
-
-	@media (min-width: 720px) and (max-width: 1000px) {
-		.image-description {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			font-family: 'Montserrat';
-			font-style: normal;
-			font-weight: 500;
-			font-size: 13px;
-			line-height: 150%;
-			margin-left: auto;
-			margin-right: auto;
-			width: 100%;
-			/* or 30px */
-
-			letter-spacing: 0.1em;
-
-			color: #081b1f;
-		}
-
-		.image-description img {
-			width: 320px;
-		}
-
-		.description {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			width: 100%;
-			max-width: none;
-		}
-
-		.contact-me {
-			display: flex;
-			justify-content: center;
-			width: 250px;
-			height: 51px;
-			box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
-
-			font-family: 'Montserrat';
-			font-style: normal;
-			font-weight: 600;
-			font-size: 18px;
-			line-height: 150%;
-			/* identical to box height, or 36px */
-
-			text-align: center;
-			letter-spacing: 0.1em;
-
-			color: #303e41;
-			text-decoration: none;
-			transition: background 0.3s ease-in;
-			margin-top: 16px;
-			z-index: 1.2;
-		}
-
-		.contact-me p {
-			align-self: center;
-		}
-
-		.contact-me:hover {
-			width: 250px;
-			height: 51px;
-			/* border-radius: 0px; */
-			background: #98a5a8;
-			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-		}
-
-		.dev_lang {
-			/* position: absolute; */
-			display: none;
-		}
-	}
-
-	@media (min-width: 1000px) and (max-width: 2400px) {
-		.image-description {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			font-family: 'Montserrat';
-			font-style: normal;
-			font-weight: 500;
-			font-size: 13px;
-			line-height: 150%;
-			margin-left: auto;
-			margin-right: auto;
-			width: 75%;
-			/* or 30px */
-
-			letter-spacing: 0.1em;
-
-			color: #081b1f;
-		}
-
-		.image-description img {
-			width: 320px;
-		}
-
-		.description {
-			max-width: none;
-		}
-		.description .content p {
-			width: 425px;
-			font-size: 16px;
-		}
-
-		.contact-me {
-			display: flex;
-			justify-content: center;
-			width: 250px;
-			height: 51px;
-			box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
-
-			font-family: 'Montserrat';
-			font-style: normal;
-			font-weight: 600;
-			font-size: 18px;
-			line-height: 150%;
-			/* identical to box height, or 36px */
-
-			text-align: center;
-			letter-spacing: 0.1em;
-
-			color: #303e41;
-			text-decoration: none;
-			transition: background 0.3s ease-in;
-			margin-top: 16px;
-			z-index: 1.2;
-		}
-
-		.contact-me p {
-			align-self: center;
-		}
-
-		.contact-me:hover {
-			width: 250px;
-			height: 51px;
-			/* border-radius: 0px; */
-			background: #98a5a8;
-			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-		}
-
-		.image-description .dev_lang {
-			grid-column-start: 1;
-			grid-column-end: 3;
-			display: inline;
-			width: 459.31px;
-			height: 212px;
-			margin-left: 64px;
-			z-index: -1;
-			object-fit: scale-down;
-			margin-bottom: 120px;
-		}
-	}
-</style>
