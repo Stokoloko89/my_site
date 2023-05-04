@@ -9,14 +9,14 @@
 <nav>
 	{#if ready}
 		<div
-			class="flex justify-between items-baseline px-8 py-5 "
+			class="flex flex-col sm:flex-row sm:justify-between items-center sm:items-baseline px-8 py-5 "
 			in:fly={{ x: -50, duration: 800, delay: 800 }}
 			out:fly={{ duration: 500 }}
 		>
 			<a
 				href="/"
 				title="Home"
-				class="text-3xl leading-59 text-gray-800 hover:text-gray-900 focus:text-gray-900 w-32 h-14 top-4 no-underline"
+				class="text-3xl text-center leading-59 text-gray-800 hover:text-gray-900 focus:text-gray-900 w-32 h-14 top-4 no-underline"
 				>Home</a
 			>
 			<ul class="flex list-none gap-4">

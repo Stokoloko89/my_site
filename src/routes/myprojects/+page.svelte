@@ -11,13 +11,13 @@
 		class="grid grid-cols-2 gap-10"
 	>
 		<h2 class="text-3xl col-span-2">Quartely Labour Force Survey 2022</h2>
-		<p class="text-base leading-8 font-normal text-justify col-span-1">
+		<p class="text-base leading-8 font-normal text-justify col-span-2 sm:col-span-1">
 			Currently, I am actively engaged in analyzing the Quarterly Labour Force Survey of Q4 2022,
 			encompassing a sample of 65115 participants, procured from the public datasets of Statistics
 			South Africa. Thus far, my work has revealed intriguing insights, specifically with regard to
 			the gender, racial, and education composition of the sample data.
 		</p>
-		<p class="text-base leading-8 font-normal text-justify col-span-1">
+		<p class="text-base leading-8 font-normal text-justify col-span-2 sm:col-span-1">
 			My approach has involved utilizing <span class="italic">Jupyter Notebooks</span>,
 			<span class="italic">Numpy</span>
 			, <span class="italic">Pandas</span>, and <span class="italic">Matplotlib</span> to compile, refine,
