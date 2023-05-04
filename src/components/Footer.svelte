@@ -1,6 +1,7 @@
 <script>
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
 	let ready = false;
 	onMount(() => (ready = true));
@@ -14,10 +15,20 @@
 			out:fly={{ duration: 5000 }}
 		>
 			<ul class="flex gap-4 mt-3">
-				<a href="/" title="Home" class="logo">Home</a>
+				{#if $page.url.pathname !== '/'}
+					<a
+						href="/"
+						title="Home"
+						class="logo"
+						in:fade={{  duration: 2000, delay: 2000 }}
+						out:fade={{ duration: 5000 }}>Home</a
+					>
+				{/if}
 				<li><a href="/about" title="About">About</a></li>
 				<li><a href="/myprojects" title="Projects">Projects</a></li>
-				<li><a href="https://www.linkedin.com/in/lunga-qaba-b19325236" title="Contact">Contact</a></li>
+				<li>
+					<a href="https://www.linkedin.com/in/lunga-qaba-b19325236" title="Contact">Contact</a>
+				</li>
 			</ul>
 			<div class="flex gap-6">
 				<a
