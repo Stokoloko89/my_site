@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="flex flex-col items-center mx-auto font-montserrat font-medium text-xs leading-6 tracking-wider text-gray-800 gap-8 px-6"
+	class="flex flex-col items-center mx-auto font-montserrat font-medium text-xs leading-6 tracking-wider text-gray-800 gap-8 px-6 mt-8"
 >
 	<div
 		in:fade={{ duration: 900, delay: 1200 }}
