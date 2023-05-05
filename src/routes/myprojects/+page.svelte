@@ -89,7 +89,7 @@
 	<a
 		in:fade={{ duration: 1200, delay: 4200 }}
 		out:fade={{ duration: 500 }}
-		href="/contact"
+		href="https://www.linkedin.com/in/lunga-qaba-b19325236"
 		class="flex items-center justify-center w-48 h-10 mx-auto my-20 font-montserrat font-semibold text-lg leading-6 text-white transition duration-300 bg-gray-700 border border-gray-700 shadow-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
 	>
 		<p>Contact me</p>
