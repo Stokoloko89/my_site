@@ -15,7 +15,7 @@
 </script>
 
 <div
-	class="flex flex-col flex-wrap sm:grid grid-cols-2 mx-auto font-montserrat font-medium text-xs leading-6 tracking-wider text-gray-800 gap-8 mt-8"
+	class="flex flex-col flex-wrap sm:grid grid-cols-2 mx-auto font-montserrat font-medium text-xs leading-6 tracking-wider text-gray-800 gap-8 sm:mt-8"
 	in:fade={{ duration: 1200, delay: 1200 }}
 	out:fade={{ duration: 500 }}
 >
