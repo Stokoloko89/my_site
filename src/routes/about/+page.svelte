@@ -42,7 +42,7 @@
 	</div>
 
 	<img
-		class="col-span-1 w-72 sm:w-96 mt-6 ml-4"
+		class="col-span-1 w-72 sm:w-96 mt-6 ml-4 sm:mt-[30%]"
 		src="images/dev_languages.png"
 		alt="A list of programming languages that I am competent in"
 		in:fade={{ duration: 1400, delay: 1400 }}
