@@ -40,14 +40,22 @@
 			consultation.
 		</p>
 	</div>
-
-	<img
-		class="col-span-1 w-72 sm:w-96 mt-6 ml-4 sm:mt-[30%]"
-		src="images/dev_languages.png"
-		alt="A list of programming languages that I am competent in"
-		in:fade={{ duration: 1400, delay: 1400 }}
-		out:fade={{ duration: 500 }}
-	/>
+	<div class="col-span-1 w-72 sm:w-96 mt-6 ml-4">
+		<img
+			class="w-72 sm:w-96 mt-6 ml-4"
+			src="images/dev_languages.png"
+			alt="A list of programming languages that I am competent in"
+			in:fade={{ duration: 1400, delay: 1400 }}
+			out:fade={{ duration: 500 }}
+		/>
+		<img
+			class="hidden sm:block sm:w-44 mt-6 mx-[35%] backdrop-blur-0"
+			src="images/background_l.svg"
+			alt="A list of programming languages that I am competent in"
+			in:fade={{ duration: 1400, delay: 1400 }}
+			out:fade={{ duration: 500 }}
+		/>
+	</div>
 	<a
 		href="https://www.linkedin.com/in/lunga-qaba-b19325236"
 		class="col-span-2 flex items-center justify-center w-48 h-10 mx-auto my-8 font-montserrat font-semibold text-lg leading-6 text-white transition duration-300 bg-gray-700 border border-gray-700 shadow-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
